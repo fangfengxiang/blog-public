@@ -1,4 +1,4 @@
-#迭代器相关简介
+# 迭代器相关简介
 
 **（一）迭代器和迭代器接口是什么**
 
@@ -31,7 +31,7 @@
 
 ----------
 
-#SPL迭代器接口（一）—Traversable Interface
+# SPL迭代器接口（一）—Traversable Interface
 
 [**Traversable Interface：**](http://php.net/manual/zh/class.traversable.php)无法被单独实现的基本抽象接口，其他的迭代器接口都直接或间接继承自该接口。
 
@@ -45,7 +45,7 @@ Traversable接口是给用C语言写PHP扩展的人准备的，只有C写的类�
 
 所以对于PHPer来说，我们更应该关注的是SPL两个派生自Traversable接口的基础级别接口，Iterator接口和IteratorAggregate接口。这两个接口才是你写的类可以直接实现的。
 
-**Traversable接口直接实现会报错：**
+** Traversable接口直接实现会报错：**
 
 ```
 class MyTraversable implements Traversable{}
@@ -55,7 +55,7 @@ class MyTraversable implements Traversable{}
 
 ----------
 
-#SPL迭代器接口（二）—Iterator Interface
+# SPL迭代器接口（二）—Iterator Interface
 
 
 [**Iterator Interface：**](http://php.net/manual/zh/class.iterator.php)直接继承自Traversable接口的两个基本迭代器接口之一。
@@ -65,7 +65,7 @@ class MyTraversable implements Traversable{}
 
 > Iterator接口允许一个类实现一个基本的迭代功能，从而使它可以被循环访问，根据键值访问和回滚。
 
-**示例代码：**
+** 示例代码：**
 
 ```
 <?php
@@ -174,21 +174,21 @@ foreach($container as $key => $dynasty){
 }
 ```
 
-**再次运行**：
+** 再次运行 **：
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-1ecdb68d9a08c59a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 这个时候我们可以发现`foreach`语句的本质，实际上是PHP帮我们自动顺序调用了迭代器对象的`rewind->valid->currrent->key->next->valid->..........` 从而实现把类中的属性数组迭代出来。
 
-**具体流程图**：
+** 具体流程图 **：
 
 （key方法和current方法顺序倒了，以我们的测试为主，应该是current方法先调用）
 
 ![流程图](http://upload-images.jianshu.io/upload_images/5261067-94c43b7a4738cc18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-**如果我们使用两次foreach呢？**
+** 如果我们使用两次foreach呢？**
 
 ```
 //遍历数组容器
@@ -203,7 +203,7 @@ foreach($container as $key =>$dynasty){
 }
 ```
 
-**再次运行**：
+** 再次运行 **：
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-9b9394289aceae87.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -222,7 +222,7 @@ foreach($container as $key =>$dynasty){
 
 ----------
 
-#SPL迭代器接口（三）—SeekableIterator Interface
+# SPL迭代器接口（三）—SeekableIterator Interface
 
 [**SeekableIterator Interface：**](http://php.net/manual/zh/class.seekableiterator.php)    Iterator接口的扩展，实现该接口允许通过键值进行查找。
 
@@ -235,7 +235,7 @@ SeekableIterator接口继承自Iterator接口。实现SeekableIterator接口，�
 
 SeekableIterator接口通过要求实现seek方法，通过实现seek方法提供了按下标索引元素的能力。
 
-**代码示例：**
+** 代码示例：**
 
 ```
 <?php
@@ -285,13 +285,13 @@ foreach($container as $key =>$dynasty){
 echo '我最想去的是'.$container->seek(1);
 ```
 
-**运行结果：**
+** 运行结果：**
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-8c0fa2eca60d3e80.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ----------
 
-#SPL迭代器接口（四）—IteratorAggregate Interface
+# SPL迭代器接口（四）—IteratorAggregate Interface
 
 [**IteratorAggregate Interface：**](http://php.net/manual/zh/class.iteratoraggregate.php)    直接继承自Traversable接口的两个基本迭代器接口之一，允许将迭代器所需实现方法委托给一个实现Iterator接口的迭代器
 
@@ -299,14 +299,14 @@ echo '我最想去的是'.$container->seek(1);
 
 IteratorAggregate接口与Iterator接口一样继承自Traversable接口。
 
->IteratorAggregate接口是用来将Iterator接口要求实现的5个迭代器方法委托给其他类的。它可以让你在类的外部实现迭代功能，并允许重新使用常用的迭代器方法，而不是在编写的每个可迭代类中重复这些方法。
+> IteratorAggregate接口是用来将Iterator接口要求实现的5个迭代器方法委托给其他类的。它可以让你在类的外部实现迭代功能，并允许重新使用常用的迭代器方法，而不是在编写的每个可迭代类中重复这些方法。
 
 简单来说，实现IteratorAggregate接口的类和实现Iterator接口的类一样也是一个迭代器，不过它不需要实现Iterator接口的5个要求实现的方法，它只需实现`getIterator`方法把Iterator接口要求实现的方法委托给一个已经实现的迭代器。
 
 实现一个迭代器前，必需先实现另一个迭代器？有点绕是吧。我们看代码就明白了。
 
 
-**代码示例：**
+** 代码示例：**
 
 ```
 <?php
@@ -366,7 +366,7 @@ foreach($container as $key => $val){
 
 ```
 
-**运行结果：**
+** 运行结果：**
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-9543be9078b7415c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -458,7 +458,7 @@ foreach($container as $key => $val){
 }
 ```
 
-**运行结果**：
+** 运行结果 **：
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-818c3e21aaed054b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -467,9 +467,9 @@ foreach($container as $key => $val){
 
 ----------
 
-#SPL迭代器接口（五）—OuterIterator Interface
+# SPL迭代器接口（五）—OuterIterator Interface
 
-[**OuterIterator Interface：** ](http://php.net/manual/zh/class.outeriterator.php)  继承自Iterator接口，允许将多个迭代器包裹其中。
+[** OuterIterator Interface：** ](http://php.net/manual/zh/class.outeriterator.php)  继承自Iterator接口，允许将多个迭代器包裹其中。
 
 ![OuterIterator Interface](http://upload-images.jianshu.io/upload_images/5261067-ec6cd284ee549586.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -482,7 +482,7 @@ OuterIterator比Iterator多了一个getInnerIterator方法，该方法根据定�
 
 但是，实际上并不行。网上这方面的资料比较少。我参考了PHP源码里的内置的[IteratorIterator](https://github.com/php/php-src/blob/master/ext/spl/internal/iteratoriterator.inc)迭代器和[AppendIterator迭代器](https://github.com/php/php-src/blob/master/ext/spl/internal/appenditerator.inc)，实现了OuterIterator接口。代码如下，欢迎大家交流指正。
 
-**代码示例：**
+** 代码示例：**
 
 ```
 <?php
@@ -594,7 +594,7 @@ foreach($container as $key => $val){
 }
 ```
 
-**运行结果：**
+** 运行结果：**
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-cf0b7ef3baa29713.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -605,7 +605,7 @@ foreach($container as $key => $val){
 
   下面是实现方式可以顺序访问实现IteratorAggregate接口的不同类型迭代器，同样遗憾地是，它不支持实现Iterator接口的迭代器。
 
-**代码示例：**
+** 代码示例：**
 
 ```
 //自定义MyOuterIterator实现OuterIterator接口
@@ -736,7 +736,7 @@ foreach($container as $key => $val){
 }
 ```
 
-**运行结果:**
+** 运行结果: **
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-62789e36c5548031.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -753,8 +753,8 @@ AppendIterator并没有直接实现OuterIterator，但它的父类IteratorIterat
 
 ----------
 
-#SPL迭代器接口（六）—RecursiveIterator Interface
-[**RecursiveIterator Interface：** ](http://php.net/manual/zh/class.recursiveiterator.php)   继承自Iterator接口，提供递归访问功能。
+# SPL迭代器接口（六）—RecursiveIterator Interface
+[** RecursiveIterator Interface：** ](http://php.net/manual/zh/class.recursiveiterator.php)   继承自Iterator接口，提供递归访问功能。
 
 
 ![RecursiveIterator Interface](http://upload-images.jianshu.io/upload_images/5261067-d9cceaa240fa00b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -764,7 +764,7 @@ RecursiveIterator与OuterIterator接口一样，继承自Iterator接口。
 
 > RecursiveIterator接口的作用在于提供递归迭代访问功能。这种类型的迭代器接口可以表达为一个树形的数据结构，其中包含了节点元素和叶子元素。目录就是一个典型递归结构。
 
-**RecursiveIterator接口实现代码：**
+** RecursiveIterator接口实现代码：**
 
 ```
 <?php
@@ -835,7 +835,7 @@ $container = new MyRecursiveIterator($arr);
 recursive($container);
 ```
 
-**运行结果：**
+** 运行结果：**
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-fc473d83ac84894d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -857,7 +857,7 @@ function recursive(MyRecursiveIterator $container,$i=0){
 }
 ```
 
-**再次运行：**
+** 再次运行：**
 
 
 ![](http://upload-images.jianshu.io/upload_images/5261067-3f86e736f0338e22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
