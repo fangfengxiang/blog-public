@@ -312,13 +312,16 @@ created_at | int | 创建时间
 ### APP后端开发工具推荐
 
 - [postman](https://www.getpostman.com/)
-
 接口调试神器
 
-- [ngrok](http://ngrok.2bdata.com/) 
+- [fiddler](https://www.telerik.com/fiddler)
+抓包神器，可以抓APP发送过来的请求，查看是否有请求提交的参数都是什么
 
+- [海马玩模拟器](http://droid4x.haimawan.com/)
+手机模拟器，可以在电脑上模拟多个Android系统的手机
+
+- [ngrok](http://ngrok.2bdata.com/) 
 内网映射工具。app开发一个麻烦的地方在于无法本地调试，因为客户端需要请求有域名或公网ip的服务端代码，虽然公司有测试服务器，但是有些时候测试服上有很多人同时使用，我git提交了修改后的服务端代码不能马上reset hard生效。或者测试服不在我开发的分支。ngrok的好处是内网映射，给你的电脑绑定一个域名。而客户端测试时填写这个域名能访问到你电脑的服务端代码，实时调试更方便。
 
 - [guzzle](https://packagist.org/packages/guzzlehttp/guzzle)
-
 php一个http 请求包，通过composer 安装快速使用，可用来写接口的测试代码，模拟发起http请求，比起postman的优点在于，通过代码实现，自定义更方便。
