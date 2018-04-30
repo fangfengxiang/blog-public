@@ -22,3 +22,8 @@
 
 ### 草稿
 草稿目录存放的是我学习中随手记的一些笔记，比较混乱。我会 定期把草稿做整理到对应的专题
+
+### 友链
+- [Mr.Zyb](http://www.zzzyb.top/)
+- [Level.Z BLOG](https://www.51linwei.top/blog.html)
+- []()
