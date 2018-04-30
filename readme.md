@@ -19,3 +19,6 @@
 
 ### 树莓派 
 - [树莓派无线网卡配置](https://github.com/fangle-void/blog/blob/master/%E6%A0%91%E8%8E%93%E6%B4%BE/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8C%97.md)
+
+### 草稿
+草稿目录存放的是我学习中随手记的一些笔记，比较混乱。我会 定期把草稿做整理到对应的专题
