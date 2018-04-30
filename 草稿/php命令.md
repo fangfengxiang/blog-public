@@ -1,0 +1,1 @@
+php -i | grep 'configure' 查看编译安装时的参数
