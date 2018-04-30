@@ -26,4 +26,4 @@
 ### 友链
 - [Mr.Zyb](http://www.zzzyb.top/)
 - [Level.Z BLOG](https://www.51linwei.top/blog.html)
-- []()
+- [Zero锐](https://www.zhaorui.info/)
