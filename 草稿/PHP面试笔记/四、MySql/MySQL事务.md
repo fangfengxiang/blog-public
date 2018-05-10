@@ -94,9 +94,9 @@ transaction-isolation = READ-COMMITTED
 
 ### 参考文章
 《MySQL技术内幕：innodb存储引擎》
-[Mysql之事务详解](https://blog.csdn.net/mevicky/article/details/50332443)
-[Innodb中的事务隔离级别和锁的关系](https://tech.meituan.com/innodb-lock.html)
-[MySQL数据库事务各隔离级别加锁情况--read committed](http://www.imooc.com/article/17290?block_id=tuijian_wz)
-[何登成大神对Innodb加锁的分析](http://www.cnblogs.com/metoy/p/8073303.html)
-[Undo和Redo以及牛逼的MVCC](https://yq.aliyun.com/articles/53601)
-[MySql-Undo及Redo详解](https://blog.csdn.net/alexdamiao/article/details/51872477)
+- [Mysql之事务详解](https://blog.csdn.net/mevicky/article/details/50332443)
+- [Innodb中的事务隔离级别和锁的关系](https://tech.meituan.com/innodb-lock.html)
+- [MySQL数据库事务各隔离级别加锁情况--read committed](http://www.imooc.com/article/17290?block_id=tuijian_wz)
+- [何登成大神对Innodb加锁的分析](http://www.cnblogs.com/metoy/p/8073303.html)
+- [Undo和Redo以及牛逼的MVCC](https://yq.aliyun.com/articles/53601)
+- [MySql-Undo及Redo详解](https://blog.csdn.net/alexdamiao/article/details/51872477)
