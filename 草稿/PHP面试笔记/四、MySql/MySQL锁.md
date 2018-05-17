@@ -95,8 +95,8 @@ Innodb引擎会自动为外键加索引，不存在外键不存在索引造成�
 #### 锁升级
 Innodb存储引擎不存在锁升级的问题。在Innodb中一个锁的开销与1000000个锁是一样的，都没有开销。
 
-### 参考
-[《MySQL技术内幕：InnoDB存储引擎》](https://baike.baidu.com/item/MySQL%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%EF%BC%9AInnoDB%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/8118300)
+### 参考文章
+- [《MySQL技术内幕：InnoDB存储引擎》](https://baike.baidu.com/item/MySQL%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95%EF%BC%9AInnoDB%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/8118300)
 [了解innodb锁](https://www.cnblogs.com/janehoo/p/5603983.html)
 [mysql的锁--行锁，表锁，乐观锁，悲观锁](https://www.cnblogs.com/deliver/p/5730616.html)
 [MySQL InnoDB 锁——官方文档](https://segmentfault.com/a/1190000014071758)
