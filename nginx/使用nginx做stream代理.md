@@ -90,6 +90,10 @@ deny all;
 
 ![image-20200908230016011](https://tva1.sinaimg.cn/large/007S8ZIlgy1gijn078nrej31kw0cadka.jpg)
 
+403标示被拒绝的ip，200表示请求成功
+
+
+
 有了这个模板，后面如果 有安装其他服务，只需要将nginx配置copy一份，稍做调整，就可以直接连上内网的服务了。so easy
 
 
