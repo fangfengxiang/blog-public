@@ -108,7 +108,3 @@ deny all;
 - [ngx_stream_log_module](http://nginx.org/en/docs/stream/ngx_stream_log_module.html)
 
 - [Accepting the PROXY Protocol](https://docs.nginx.com/nginx/admin-guide/load-balancer/using-proxy-protocol/)
-
-  
-
-# 
