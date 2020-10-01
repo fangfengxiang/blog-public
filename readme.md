@@ -13,7 +13,7 @@
 - [SPL 数组重载](https://github.com/fangle-void/blog/blob/master/SPL%E5%AD%A6%E4%B9%A0/SPL%20%E6%95%B0%E7%BB%84%E9%87%8D%E8%BD%BD.md)
 
 ### 设计模式 PHP 实现
-- [暂时没有时间移动过来 请移步简书](https://www.jianshu.com/c/ecfd249dcea2)
+- [设计模式系列](https://github.com/fangfengxiang/blog-public/tree/master/PHP/PHP%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
 
 
 ### 树莓派 
@@ -35,6 +35,9 @@
 
 ---
 
-​                                          ![公众号-刀斧手何在](https://tva1.sinaimg.cn/large/007S8ZIlgy1gja9pnqk4nj30by0bydgn.jpg) 
+- 欢迎关注我的公众号: 刀斧手何在
+
+![公众号:刀斧手何在](https://tva1.sinaimg.cn/large/007S8ZIlgy1gja9pnqk4nj30by0bydgn.jpg) 
+
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gja9ojvz38j30u00u0jt3.jpg)
