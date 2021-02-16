@@ -13,9 +13,9 @@
 
 (1) 跨函数甚至跨协程 传递上下文信息。解决请求过程变量作用域问题 
 
-cls (continuation local storage) or TLS(Thread local storage)
+CLS(continuation local storage) or TLS(Thread local storage)
 
-(2) 控制goroutnie行为。解决goruntine协同问题
+(2) 控制goroutine行为。解决goroutine协同问题
 
 > 我们经常使用 Context 来取消一个 goroutine 的运行，这是 Context 最常用的场景之一，Context 也被称为 goroutine 生命周期范围（goroutine-scoped）的 Context，把 Context 传递给 goroutine。但是，goroutine 需要尝试检查 Context 的 Done 是否关闭了
 
@@ -123,7 +123,7 @@ func TestCancelCtx(t *testing.T) {
 }
 ```
 
-也就是 我们通过调用withCancel得到闭包函数来关闭这个context，传递这个关闭消息到其他goruntinue
+也就是 我们通过调用withCancel得到闭包函数来关闭这个context，传递这个cancelCtx到其他goruntinue
 
 ##### cancelCtx 定义
 
